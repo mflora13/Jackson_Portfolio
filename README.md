@@ -5,10 +5,14 @@ All the projects(Class Project, Kaggle.Com, etc) in this repository are presente
 - **Email**: [yzhuox721@gmail.com](yzhuox721@gmail.com)
 - **Linkedln**: [https://www.linkedin.com/in/zhuoxin-yang/](https://www.linkedin.com/in/zhuoxin-yang/)
 
-## Table of Contents
-### 1. SQL
+## Projects
 
-### 2. Data visualization
+
+
+## Micro Projects
+- Machine Learning
+- SQL
+- Data Visualization
 
 
 # [Project 1: NBA salary](https://github.com/YZXBiz/Yang_Portfolio/tree/main/R/NBA_Salary)
