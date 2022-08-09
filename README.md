@@ -14,3 +14,12 @@ All the projects(Class Project, Kaggle.Com, etc) in this repository are presente
 # [Project 1: NBA salary](https://github.com/YZXBiz/Yang_Portfolio/tree/main/R/NBA_Salary)
 * Analyzing nba salary based off 2017 seasons
 * Skills:
+
+## Core Competencies
+- **Languages**: SQL, Python(Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn), R (Tidyverse)
+- **Tools**: MySQL, Tableau, MS Excel(VBA)
+- **Methodologies**: Machine Learning, A/B Testing
+
+## Certificates
+- Data Analytics Certificate By Google
+- 
