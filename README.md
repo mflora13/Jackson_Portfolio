@@ -5,21 +5,21 @@ All the projects(Class Project, Kaggle.Com, etc) in this repository are presente
 - **Email**: [yzhuox721@gmail.com](yzhuox721@gmail.com)
 - **Linkedln**: [https://www.linkedin.com/in/zhuoxin-yang/](https://www.linkedin.com/in/zhuoxin-yang/)
 
-## 1. Projects
+## Projects
 
 
 
-## 2. Micro Projects
+## Micro Projects
 - Machine Learning
 - SQL
 - Data Visualization
 
 
-## 3. Core Competencies
+## Core Competencies
 - **Languages**: SQL, Python(Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn), R (Tidyverse)
 - **Tools**: MySQL, Tableau, MS Excel(VBA)
 - **Methodologies**: Machine Learning, A/B Testing
 
-## 4. Certificates
+## Certificates
 - Data Analytics Certificate By Google
 - 
