@@ -33,8 +33,8 @@ Hi! Welcome to my PERSONAL DATA SCIENCE PORTFOLIO website. My name is Jackson Ya
 ## Micro Projects
 - Machine Learning
 - SQL
-    - LeetCode
-    - Professional project
+    - [LeetCode](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Micro%20Projects/SQL/Leetcode)
+    - [MySQL45](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Micro%20Projects/SQL/Mysql45(Chinese))
 - Data Visualization
 
 
