@@ -25,10 +25,6 @@ In **Projects** sections, I listed some insightful data science projects that I'
 - **Linkedln**: [https://www.linkedin.com/in/zhuoxin-yang/](https://www.linkedin.com/in/zhuoxin-yang/)
 
 
-
-
-
-
 ## Projects
 
 
@@ -36,6 +32,7 @@ In **Projects** sections, I listed some insightful data science projects that I'
 ## Micro Projects
 - Machine Learning
 - SQL
+    - 
 - Data Visualization
 
 
