@@ -2,7 +2,6 @@
 
 <p align="center">
     <img alt="DataScience" title="DataScience" src="https://scontent-atl3-2.xx.fbcdn.net/v/t1.6435-9/50668157_10161237108170705_9039394814923112448_n.png?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=HUt-sXnpOWUAX8fzM8h&tn=omnbPY_wYR65mjka&_nc_ht=scontent-atl3-2.xx&oh=00_AT91SnJkMp0ZSKjEHSOKQYBBSmOjKjzUWhsfX3RrH2hPyg&oe=6317EB4B" width="300" height="300">
-  </a>
 </p>
 
 
