@@ -27,7 +27,7 @@ Hi! Welcome to my PERSONAL DATA SCIENCE PORTFOLIO website. My name is Jackson Ya
 
 ## Projects
 
-
+ 
 
 ## Micro Projects
 - SQL
