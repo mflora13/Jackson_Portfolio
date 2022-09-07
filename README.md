@@ -27,6 +27,11 @@ Hi! Welcome to my PERSONAL DATA SCIENCE PORTFOLIO website. My name is Jackson Ya
 
 ## Projects
 
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Click through Rate Analysis (Python) ](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Projects)**
+
+The marketing department desires to understand the primary factors that influence the email click-through rate. I used logistic regression primarily to validate the significance of each element and to assist the marketing department in determining when and how to send promotional emails.
+
+#
  
 
 ## Micro Projects
