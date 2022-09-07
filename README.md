@@ -1,9 +1,7 @@
 <h1 align="center"> Data Science Portfolio by Jackson Yang </h1> <br>
 
 <p align="center">
-    <img alt="
-              
-              " width="300" height="300">
+    <img alt="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/printpms-bluewhitetextnobordernotm%20copy.png" width="300" height="300">
 </p>
 
 
