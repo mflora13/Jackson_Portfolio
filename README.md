@@ -1,7 +1,7 @@
 <h1 align="center"> Data Science Portfolio by Jackson Yang </h1> <br>
 
 <p align="center">
-    <img alt="https://www-prod.fuqua.duke.edu/sites/www1.fuqua.duke.edu/files/media/logo_files/without_mark/digital-bluewhitetextnobordernotm300.jpg?_gl=1*yenu7c*_ga*MTU5MTg4OTc2Ni4xNjM3NjQ0NjA0*_ga_1QY6PJLGK7*MTY2MjU3ODA2MS41NS4xLjE2NjI1Nzg2MTkuNTUuMC4w" width="300" height="300">
+    <img alt="[https://www-prod.fuqua.duke.edu/sites/www1.fuqua.duke.edu/files/media/logo_files/without_mark/digital-bluewhitetextnobordernotm300.jpg?_gl=1*yenu7c*_ga*MTU5MTg4OTc2Ni4xNjM3NjQ0NjA0*_ga_1QY6PJLGK7*MTY2MjU3ODA2MS41NS4xLjE2NjI1Nzg2MTkuNTUuMC4w](https://www-prod.fuqua.duke.edu/sites/www1.fuqua.duke.edu/files/media/logo_files/without_mark/digital-bluewhitetextnobordernotm300.jpg?_gl=1*yenu7c*_ga*MTU5MTg4OTc2Ni4xNjM3NjQ0NjA0*_ga_1QY6PJLGK7*MTY2MjU3ODA2MS41NS4xLjE2NjI1Nzg2MTkuNTUuMC4w)" width="300" height="300">
 </p>
 
 
