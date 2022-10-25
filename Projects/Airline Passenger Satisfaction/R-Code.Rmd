@@ -1,0 +1,703 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# 0.Load data and libraries
+```{r}
+#Please install the following libraries if not
+library(tidyverse)
+library(mde)
+library(hrbrthemes)
+library(tidyverse)
+library(ggridges)
+library(ggthemes)
+library(cowplot)
+library(viridis)
+library(GGally)
+source("DataAnalyticsFunctions.R")
+source("PerformanceCurves.R")
+df <- read.csv('Invistico_Airline.csv') # load data
+```
+
+# 1. Business Understanding
+**Airline Passenger Satisfaction Analysis**
+
+**Business Problem**:
+
+Before delving into building the model, it is important to understand
+why it is essential for airline companies to improve customers' satisfaction level. 
+The level of customer satisfaction is a crucial determinant of whether or not a consumer will
+book a flight with a certain airline. Therefore, understanding what influences customer happiness and what makes consumers more satisfied is essential for airliners. ***More importantly, in this project, we want to find out that how we can change satisfaction level to maximize airline companies' profit.*** 
+
+**Variable Description**:
+
+***The dependent variable of our data set is satisfaction, which is binary variable [satisfied, not satisfied]. We have some demographic variables about airline passengers as well as some subjective question regarding their satisfaction level of some feature out of scale 1-5 (0 as not applicable). `The details of each variable description is at below` ***
+
+Gender: Gender of the passengers (Female, Male)
+
+Customer Type: The customer type (Loyal customer, disloyal customer)
+
+Age: The actual age of the passengers
+
+Type of Travel: Purpose of the flight of the passengers (Personal
+Travel, Business Travel)
+
+Class: Travel class in the plane of the passengers (Business, Eco, Eco
+Plus)
+
+Flight distance: The flight distance of this journey
+
+Inflight wifi service: Satisfaction level of the inflight wifi service
+(0:Not Applicable;1-5)
+
+Departure/Arrival time convenient: Satisfaction level of
+Departure/Arrival time convenient
+
+Ease of Online booking: Satisfaction level of online booking
+
+Gate location: Satisfaction level of Gate location
+
+Food and drink: Satisfaction level of Food and drink
+
+Online boarding: Satisfaction level of online boarding
+
+Seat comfort: Satisfaction level of Seat comfort
+
+Inflight entertainment: Satisfaction level of inflight entertainment
+
+On-board service: Satisfaction level of On-board service
+
+Leg room service: Satisfaction level of Leg room service
+
+Baggage handling: Satisfaction level of baggage handling
+
+Check-in service: Satisfaction level of Check-in service
+
+Inflight service: Satisfaction level of inflight service
+
+Cleanliness: Satisfaction level of Cleanliness
+
+Departure Delay in Minutes: Minutes delayed when departure
+
+Arrival Delay in Minutes: Minutes delayed when Arrival
+
+Satisfaction: Airline satisfaction level(Satisfaction, neutral or
+dissatisfaction)
+
+# 2. Data Understanding (insights)
+## 2.1 Depedent variable
+```{r}
+#data cleaning
+#drop Nulls
+df <- df[!is.na(df$Arrival.Delay.in.Minutes),] 
+#dropped all the subjective satisfaction x variables which contain 0 
+df <- df[which(rowSums(df[,c('Seat.comfort','Departure.Arrival.time.convenient','Food.and.drink', "Gate.location","Inflight.wifi.service", "Inflight.entertainment", "Online.support","Ease.of.Online.booking","On.board.service","Leg.room.service","Baggage.handling","Checkin.service","Cleanliness","Online.boarding")]==0)==0),]
+
+
+piecustomer<-c(sum(df$satisfaction=='satisfied'),sum(df$satisfaction!='satisfied'))
+label <- c('satisfied','unsatisfied')
+label<- paste(label, piecustomer)
+pie(piecustomer,label,main = 'Number of Satisfied Customers VS Unsatisfied')
+piecustomer
+```
+**Inference**: We can see that number of satisfied and unsatisfied customers are similar with slightly more satisfied customers in the data set. Good news is that the label is not unbalanced, which is great for later logistic etc model building.
+
+## 2.2 Overview of customers' demographic with satisfaction
+**Demographic Variables:** age, gender 
+
+### 2.2.1 Gender
+```{r}
+tema = theme(plot.title = element_text(size=13, hjust=.5,face='bold'),
+             axis.text.x = element_text(size=12),
+             axis.text.y = element_text(size=12))
+
+ggplot(df,aes(x=Gender,fill=satisfaction))+geom_bar(color='black',state='identity')+labs(x=NULL,y=NULL,title = 'Number of Satisfied Customers  in each Gender') + theme_few() + tema 
+```
+**Inference**: We can see that each gender is well-representative and overall, female are more satisfied with the overall service of Airlines.
+
+### 2.2.2 Age
+```{r}
+tema = theme(plot.title = element_text(size=13, hjust=.5,face='bold'),
+             axis.text.x = element_text(size=12),
+             axis.text.y = element_text(size=12)) + theme_few()
+
+ggplot(df,aes(x=Age,fill=satisfaction))+geom_bar(color='black') +labs(x='Age',y='Number of Customers', title = 'Age distribution for Satisfied/Dissatisfied Custoemrs') + tema 
+
+```
+**Inference:** We can see that people who are 25 to 60 are most representative in this data set. Customers who are older than 60 and younger than 20 are less representative in this data set. This difference could also be that the young and old groups don't travel much often compared to 20-60 age group and thus there are less satisfaction survey filled out.
+
+## 2.3 Overview of pre-flight with satisfaction
+
+**Pre-flight:**
+```{r}
+#Pick pre-flight subjective variables
+pre.flight.subjective <- df %>% select(c('Departure.Arrival.time.convenient','Gate.location','Online.support','Ease.of.Online.booking','Checkin.service','Online.boarding'))
+```
+
+```{r}
+#Visualization
+tema = theme(plot.title = element_text(size=10, hjust=.5),
+             axis.text.x = element_text(size=12),
+             axis.text.y = element_text(size=12))
+
+theme_set(theme_clean())
+
+Departure.Arrival.time.convenient <- ggplot(data = df, mapping = aes(x = Departure.Arrival.time.convenient)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Departure.Arrival.time.convenient',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Gate.location <- ggplot(data = df, mapping = aes(x = Gate.location)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Gate.location',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Online.support <- ggplot(data = df, mapping = aes(x = Online.support)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Online.support',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Ease.of.Online.booking <- ggplot(data = df, mapping = aes(x = Ease.of.Online.booking)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Ease.of.Online.booking',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Checkin.service <- ggplot(data = df, mapping = aes(x = Checkin.service)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Checkin.service',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Online.boarding <- ggplot(data = df, mapping = aes(x = Online.boarding)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Online.boarding',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+plot_grid(Departure.Arrival.time.convenient,Gate.location,Online.support,Ease.of.Online.booking,Checkin.service,Online.boarding)
+
+
+```
+
+## 2.4 Overview of mid-flight with satisfaction
+```{r}
+in.flight.subjective <- df[,!(colnames(df)  %in%  colnames(pre.flight.subjective))] %>% select(-c('satisfaction','Gender','Customer.Type','Age','Type.of.Travel','Class','Flight.Distance','Departure.Delay.in.Minutes','Arrival.Delay.in.Minutes'))
+
+names(in.flight.subjective)
+
+```
+
+```{r}
+#Visualization
+tema = theme(plot.title = element_text(size=10, hjust=.5),
+             axis.text.x = element_text(size=12),
+             axis.text.y = element_text(size=12))
+
+theme_set(theme_clean())
+
+Seat.comfort <- ggplot(data = df, mapping = aes(x = Seat.comfort)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Seat.comfort',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Food.and.drink <- ggplot(data = df, mapping = aes(x = Food.and.drink)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Food.and.drink',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Inflight.wifi.service <- ggplot(data = df, mapping = aes(x = Inflight.wifi.service)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Inflight.wifi.service',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Inflight.entertainment <- ggplot(data = df, mapping = aes(x = Inflight.entertainment)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Inflight.entertainment',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+On.board.service <- ggplot(data = df, mapping = aes(x = On.board.service)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='On.board.service',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Leg.room.service <- ggplot(data = df, mapping = aes(x = Leg.room.service)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Leg.room.service',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Baggage.handling <- ggplot(data = df, mapping = aes(x = Baggage.handling)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Baggage.handling',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+Cleanliness <- ggplot(data = df, mapping = aes(x = Cleanliness)) +
+    geom_boxplot(fill = "light blue", color = "black", size = 1.3, alpha = .8) +
+    labs (title='Cleanliness',x='Satisfaction',y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25)) + tema + coord_flip()
+
+
+
+plot_grid(Seat.comfort,Food.and.drink,Inflight.wifi.service,Inflight.entertainment, On.board.service,Leg.room.service,Baggage.handling,Cleanliness,Departure.Arrival.time.convenient,Gate.location,Online.support,Ease.of.Online.booking,Checkin.service,Online.boarding)
+```
+
+## 2.5 Other variables
+```{r}
+others_1 <- df[,!(colnames(df)  %in% colnames(pre.flight.subjective))] 
+others <- others_1[,!(colnames(others_1)  %in% colnames(in.flight.subjective))]
+```
+
+### 2.5.1 Customer Types
+```{r}
+#Visualization
+ggplot(others, aes(Customer.Type)) + geom_bar(aes(fill=satisfaction), color='black') + tema + labs (title='Customer Type',x=NULL,y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25))
+```
+**Inference**: 
+Even though there are more loyal customers than disloyal customers, we can still see that loyal customer tend to be more satisfied than disloyal customer. This graph might indicate that airline companies should try to convert more customers into loyalty program so as to increase the total satisfaction level of customers. Though there are many factors impacting the satisfaction that we need to consider, loyal customer can bring more revenue and are easier to retain compared to disloyal.
+
+
+### 2.5.2 Type.of.Travel
+```{r}
+ggplot(others, aes(Type.of.Travel)) + geom_bar(aes(fill=satisfaction), color='black') + tema + labs (title='Type of Travel',x=NULL,y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25))
+```
+**Inference**: 
+We can see that there are more business travelers than personal travels, which might explain why there are more loyal customers than disloyal customers. From the graph, it is hard to see that either business or personal travel has more satisfied passengers or not.
+
+### 2.5.3 Class
+```{r}
+ggplot(others, aes(Class)) + geom_bar(aes(fill=satisfaction), color='black') + tema + labs (title='Class',x=NULL,y=NULL) + 
+    theme(plot.title = element_text(hjust=.5,size=25))
+```
+**Inference**:
+We have more travelers from business class [indicated by the previous graph where there are more business travelers]. we can see that in general, passengers from business class are more satisfied than Eco and Eco plus.
+
+### 2.5.4 Flight.Distance
+```{r}
+ggplot(others, aes(Flight.Distance, color=satisfaction)) + geom_bar() + tema + labs(title='Flight.Distance',x='Distance',y=NULL) + theme(plot.title = element_text(hjust=.5,size=25)) 
+```
+**Inference**:
+We can see that there are more passengers who travel around 2000 miles distance.
+
+### 2.5.5
+```{r}
+names(others)
+
+Departure.Delay.in.Minutes.hist <- df %>% filter(Departure.Delay.in.Minutes > 0) %>% ggplot(mapping = aes(x = Departure.Delay.in.Minutes)) +
+    geom_histogram(fill = "red", size = 1.6, alpha = .7) +
+    labs (title='Departure.Delay.in.Minutes',y=NULL,x=NULL) + 
+    tema
+
+Arrival.Delay.in.Minutes.hist <- df %>% filter(Arrival.Delay.in.Minutes > 0) %>% ggplot(mapping = aes(x = Arrival.Delay.in.Minutes)) +
+    geom_histogram(fill = "red", size = 1.6, alpha = .7) +
+    labs (title='Arrival.Delay.in.Minutes',y=NULL,x=NULL) + 
+    tema
+
+plot_grid(Departure.Delay.in.Minutes.hist,Arrival.Delay.in.Minutes.hist)
+
+```
+
+**Inference**:
+The similarities between these two graphs are evident. This makes sense since if an airline's departure is delayed, it is quite likely that its arrival will also be delayed.
+
+## 2.6 additional data exploration - kmeans
+### 2.6.1 K-mean visualization
+```{r}
+### k-means
+library(factoextra)
+set.seed(42)
+airline_kmean <- model.matrix(satisfaction ~.  ,data=df)[,-1]
+airline_kmean <- scale(airline_kmean)
+
+ThrCenters <- kmeans(airline_kmean,3,nstart=25)
+fviz_cluster(object=ThrCenters,airline_kmean,
+             ellipse.type = "euclid",star.plot=T,repel=T,
+             geom = "point",palette='jco',main="",
+             ggtheme=theme_minimal())+
+  theme(axis.title = element_blank())
+#divide into 3 clusters
+ThrCenters$centers[1,]
+ThrCenters$centers[2,]
+ThrCenters$centers[3,]
+```
+
+###2.6.2 Inference
+```{r}
+### Sizes of clusters
+size <- ThrCenters$size
+size
+a<-aggregate( df$satisfaction=='dissatisfied' ~ ThrCenters$cluster, FUN=mean)
+b<-aggregate( df$Seat.comfort ~ ThrCenters$cluster, FUN = mean )
+c<-aggregate( df$Departure.Arrival.time.convenient ~ ThrCenters$cluster, FUN = mean )
+d<-aggregate( df$Food.and.drink ~ ThrCenters$cluster, FUN = mean )
+e<-aggregate( df$Gate.location ~ ThrCenters$cluster, FUN = mean )
+f<-aggregate( df$Inflight.wifi.service ~ ThrCenters$cluster, FUN = mean )
+g<-aggregate( df$Inflight.entertainment ~ ThrCenters$cluster, FUN = mean )
+h<-aggregate( df$Online.support ~ ThrCenters$cluster, FUN = mean )
+i<-aggregate( df$Ease.of.Online.booking ~ ThrCenters$cluster, FUN = mean )
+j<-aggregate( df$On.board.service ~ ThrCenters$cluster, FUN = mean )
+k<-aggregate( df$Leg.room.service~ ThrCenters$cluster, FUN = mean )
+l<-aggregate( df$Baggage.handling~ ThrCenters$cluster, FUN = mean )
+m<-aggregate( df$Checkin.service~ ThrCenters$cluster, FUN = mean )
+n<-aggregate( df$Cleanliness~ ThrCenters$cluster, FUN = mean )
+o<-aggregate( df$Online.boarding~ ThrCenters$cluster, FUN = mean )
+
+
+kmeans_output <- cbind(a,size,b[,2],c[,2],d[,2],e[,2],f[,2],g[,2],h[,2],i[,2],j[,2],k[,2],l[,2],m[,2],n[,2],o[,2])
+colnames(kmeans_output) <-c('cluster','dissatisfied','size','Seat comfort',	'Departure/Arrival time convenient',	'Food and drink',	'Gate location',	'Inflight wifi service',	'Inflight entertainment',	'Online support',	'Ease of Online booking',	'On-board service',	'Leg room service',	'Baggage handling',	'Checkin service',	'Cleanliness',	'Online boarding')
+view(kmeans_output)
+```
+
+## 2.7 additional data exploration - PCA
+###2.7.1 PCA visualization
+```{r}
+### Lets compute the (Full) PCA
+airline_x <- model.matrix(satisfaction ~.,data=df)[,-1]
+airline_pca <- prcomp(airline_x, scale=TRUE)
+### Lets plot the variance that each component explains
+par(mar=c(4,4,4,4)+0.3)
+plot(airline_pca,main="PCA: Variance Explained by Factors")
+mtext(side=1, "Factors",  line=1, font=2)
+
+# Compute variance
+airline_pca.var <- airline_pca$sdev ^ 2
+airline_pca.var
+ 
+# Proportion of variance for a scree plot
+propve <- airline_pca.var / sum(airline_pca.var)
+propve
+
+# Plot variance explained for each principal component
+plot(propve, xlab = "principal component",
+            ylab = "Proportion of Variance Explained",
+            ylim = c(0, 1), type = "b",
+            main = "Scree Plot")
+ 
+# Plot the cumulative proportion of variance explained
+plot(cumsum(propve),
+    xlab = "Principal Component",
+    ylab = "Cumulative Proportion of Variance Explained",
+    ylim = c(0, 1), type = "b")
+```
+
+### 2.7.2 PCA inference
+```{r}
+####Loading 1
+loadings <- airline_pca$rotation[,1:3]
+v<-loadings[order(abs(loadings[,1]), decreasing=TRUE)[1:ncol(airline_x)],1]
+loadingfit <- lapply(1:ncol(airline_x), function(k) ( t(v[1:k])%*%v[1:k] - 3/4 )^2)
+v[1:which.min(loadingfit)]
+#### Looking at which are large positive and large negative
+#### First factor is Online service
+
+#### Loading 2
+v<-loadings[order(abs(loadings[,2]), decreasing=TRUE)[1:ncol(airline_x)],2]
+loadingfit <- lapply(1:ncol(airline_x), function(k) ( t(v[1:k])%*%v[1:k] - 3/4 )^2)
+v[1:which.min(loadingfit)]
+#### Second factor is food and drink, convenient
+```
+
+# 3. Data Preparation
+## 3.1 Null values
+```{r}
+na_summary(df) #this function is used to give the null summary of the dataset
+```
+We can see that the null data (Arrival.Delay) 393 is nothing compared to
+the overall data set size. So, we can safely drop them without worrying
+too much about its impact on the integrity of the whole data set.
+
+```{r}
+df <- df[!is.na(df$Arrival.Delay.in.Minutes),] #drop Nulls
+```
+
+## 3.2 Feature engineering
+**Question**:
+Because we want to see how the change of satisfaction rate can impact passengers' profit. So, there are two important variables that we need to create and estimate for our study.
+* The ticket price of each customer
+* The cost associated with the change of customers' satisfaction level
+
+### A. Estimate the tick price for each passenger 
+```{r}
+df <- df %>% mutate(Class_level = if_else(Class == 'Eco',1,if_else(Class=='Business',3,2))) #change customer classes into numeric variable for calculation
+df <- df %>% mutate(ticket_price = ((1/5) * df$Flight.Distance * df$Class_level) + 100)
+# we estimate an equation to compute the tick price
+```
+
+### B. Satisfaction and cost model
+```{r}
+#We dropped all the subjective satisfaction x variables which contain 0 [0 indicates no applicable: useless for our study]
+
+df <- df[which(rowSums(df[,c('Seat.comfort','Departure.Arrival.time.convenient','Food.and.drink', "Gate.location","Inflight.wifi.service", "Inflight.entertainment", "Online.support","Ease.of.Online.booking","On.board.service","Leg.room.service","Baggage.handling","Checkin.service","Cleanliness","Online.boarding")]==0)==0),]
+
+#Merge all satisfactions into one overall satisfaction for simple calculation
+df = df %>% mutate(satisfaction.level.overall =0.3 *df$Food.and.drink + 0.2*df$Inflight.entertainment +0.3* 0.2*(df$Checkin.service + df$On.board.service + df$Inflight.wifi.service + df$Online.support + df$Ease.of.Online.booking+df$Baggage.handling) + 0.2* 0.167*(df$Seat.comfort+ df$Departure.Arrival.time.convenient+df$Gate.location + df$Leg.room.service + df$Cleanliness + df$Online.boarding))
+#We use the satisfaction moedel and obtained the overall satisfaction level for each customer
+
+#Finally, cost and satisfaction function - average cost of satisfaction improvement on each class passenger
+cost_function <- function(satisfaction, class){
+  cost = 100 * satisfaction
+  return(cost)
+}
+
+```
+
+
+# 4. Modeling
+## 4.1 Data transformation 
+```{r}
+#convert all strings into factors
+df <- df %>% select(-c('Class_level','Seat.comfort','Departure.Arrival.time.convenient','Food.and.drink','Gate.location','Inflight.wifi.service','Inflight.entertainment','Online.support','Ease.of.Online.booking','On.board.service','Leg.room.service','Baggage.handling','Checkin.service','Cleanliness','Online.boarding'))
+df[sapply(df,is.character)] <- lapply(df[sapply(df,is.character)],as.factor)
+
+## train test split
+library(caTools)
+set.seed(42)
+sample <- sample.split(df$satisfaction, SplitRatio = 0.7) 
+#70% for training and 30% for validation
+train <- df %>% filter(sample == T)
+test <- df %>% filter(sample == F)
+```
+
+## 4.2 The model that airline businesses can employ to predict passenger satisfaction 
+```{r}
+### Need to estimate satisfaction
+### Compare different models 
+### m.lr : logistic regression
+### m.lr.l : logistic regression with lasso
+### m.lr.pl : logistic regression with post lasso
+### m.lr.tree : classification tree
+
+library(glmnet)
+#### Lets run Lasso
+#### First lets set up the data for it
+#### the features need to be a matrix ([,-1] removes the first column which is the intercept)
+
+Mx<- model.matrix(satisfaction ~ ., data=train)[,-1] 
+My<- train$satisfaction == "satisfied"
+lasso <- glmnet(Mx,My, family="binomial")
+lassoCV <- cv.glmnet(Mx,My, family="binomial")
+
+#for post lasso parameters setup
+num.features <- ncol(Mx)
+num.n <- nrow(Mx)
+num.sat <- sum(My)
+w <- (num.sat/num.n)*(1-(num.sat/num.n))
+lambda.theory <- sqrt(w*log(num.features/0.05)/num.n)
+lassoTheory <- glmnet(Mx,My, family="binomial",lambda = lambda.theory)
+summary(lassoTheory)
+support(lassoTheory$beta)
+
+features.min <- support(lasso$beta[,which.min(lassoCV$cvm)])
+features.min <- support(lassoTheory$beta)
+  length(features.min)
+data.min <- data.frame(Mx[,features.min],My)
+```
+
+## 4.3 Performance metrics and k-fold set up
+```{r}
+### prediction is a probability score
+### we convert to 1 or 0 via prediction > threshold
+PerformanceMeasure <- function(actual, prediction, threshold=.5) {
+  # 1-mean( abs( (prediction>threshold) - actual ) )
+  R2(y=actual, pred=prediction, family="binomial")
+  # 1-mean( abs( (prediction - actual) ) )
+}
+
+#kfold setup
+n <- nrow(train)
+nfold <- 10
+OOS <- data.frame(m.lr=rep(NA,nfold), m.lr.l=rep(NA,nfold), m.lr.pl=rep(NA,nfold), m.tree=rep(NA,nfold), m.average=rep(NA,nfold)) 
+#names(OOS)<- c("Logistic Regression", "Lasso on LR ", "Post Lasso on LR ", "Classification Tree", "Random Forest", "Average of Models")
+foldid <- rep(1:nfold,each=ceiling(n/nfold))[sample(1:n)]
+```
+## 4.4 Model running
+```{r}
+#kfold
+library(tree)
+library(partykit)
+library(glmnet)
+library(caret)
+
+for(k in 1:nfold){ 
+  train_k <- which(foldid!=k) # train on all but fold `k'
+  
+  ### Logistic regression
+  m.lr <-glm(satisfaction~., data=train,subset=train_k,family="binomial")
+  pred.lr <- predict(m.lr, newdata=train[-train_k,], type="response")
+  OOS$m.lr[k] <- PerformanceMeasure(actual=My[-train_k], pred=pred.lr)
+  
+  ### the Post Lasso Estimates
+  m.lr.pl <- glm(My~., data=data.min, subset=train_k, family="binomial")
+  pred.lr.pl <- predict(m.lr.pl, newdata=data.min[-train_k,], type="response")
+  OOS$m.lr.pl[k] <- PerformanceMeasure(actual=My[-train_k], prediction=pred.lr.pl)
+  
+  ### the Lasso estimates  
+  m.lr.l  <- glmnet(Mx[train_k,],My[train_k], family="binomial",lambda = lassoCV$lambda.min)
+  pred.lr.l <- predict(m.lr.l, newx=Mx[-train_k,], type="response")
+  OOS$m.lr.l[k] <- PerformanceMeasure(actual=My[-train_k], prediction=pred.lr.l)
+
+  ### the classification tree
+  m.tree <- tree(satisfaction~ ., data=train, subset=train_k) 
+  pred.tree <- predict(m.tree, newdata=train[-train_k,], type="vector")
+  pred.tree <- pred.tree[,2]
+  OOS$m.tree[k] <- PerformanceMeasure(actual=My[-train_k], prediction=pred.tree)
+
+  ###Average 
+  pred.m.average <- rowMeans(cbind(pred.tree, pred.lr.l, pred.lr.pl, pred.lr))
+  OOS$m.average[k] <- PerformanceMeasure(actual=My[-train_k], prediction=pred.m.average)
+  
+  print(paste("Iteration",k,"of",nfold,"completed"))
+  
+}
+
+```
+
+# 5. Evaluation
+## 5.1 OOS performance and model selection
+```{r}
+par(mar=c(7,5,.5,1)+0.3)
+bar.plot <- barplot(colMeans(OOS), las=2,xpd=FALSE , xlab="",  ylab = bquote( "Average Out of Sample Performance"))
+box.plot <- boxplot(OOS, col="plum", las = 2, ylab=expression(paste("OOS ",R^2)), xlab="", main="10-fold Cross Validation")
+round(colMeans(OOS),4)
+```
+
+
+```{r}
+### We use the logistic regression Estimates to predict models as it has the highest OOS R^2
+### and we build the method with the whole training set
+m.lr <- glm(satisfaction~., data=train, family="binomial")
+pred.lr <- predict(m.lr, newdata=test, type="response")
+
+```
+
+## 5.2 Confusion matrix
+```{r}
+#confusion matrix
+### We can make predictions using the rule
+### if hat prob >= threshold, we set hat Y= 1
+### otherwise we set hat Y= 0
+### threshold = 0.5 [We will use threshold 0.5 as our prediction benchmark]
+My <- test$satisfaction == 'satisfied'
+PL.performance <- FPR_TPR(pred.lr>=0.5 , My)
+PL.performance
+confusion.matrix <- c( sum(pred.lr>=0.5) *PL.performance$TP,  sum(pred.lr>=0.5) * PL.performance$FP,  sum(pred.lr<0.5) * (1-PL.performance$TP),  sum(pred.lr<0.5) * (1-PL.performance$FP) )
+
+confusion.matrix <- c( sum( (pred.lr>=0.5) * My ),  sum( (pred.lr>=0.5) * !My ) , sum( (pred.lr<0.5) * My ),  sum( (pred.lr<0.5) * !My))
+confusion.matrix
+
+```
+
+## 5.3 Cost benefit 
+```{r}
+#cost benefit matrix
+cost.benefit.matrix <- c( 150,-100,130,-80 )
+#we estimate the cost benefit matrix based on the mean of tick price and our intuition
+```
+
+## 5.4 Expected profit 
+```{r}
+### Expected profit
+t(cost.benefit.matrix) %*% confusion.matrix
+
+### Baseline of majority rule (nobody unsatisfied prediction)
+cost.benefit.matrix %*% c( sum(My), sum(!My),0, 0 )
+
+```
+**Inference**:
+* expected profit of logistic regression: 187663
+* expected profit of majority rule: 126505
+
+## 5.5 Curves
+```{r}
+### for logistic predictions, we will use functions in PerformanceCurves.R files (load earlier)
+par(mar=c(5,5,3,5))
+profit <- profitcurve(p=pred.lr,y=My,cost.benefit.m=cost.benefit.matrix)
+roccurve <-  roc(p=pred.lr, y=My, bty="n")
+cumulative <- cumulativecurve(p=pred.lr,y=My)
+lift <- liftcurve(p=pred.lr,y=My)
+```
+**Inference**: 
+* `Profit Curve`: Order the customer based on their profit, we should target around 60% of customers to make the maximized amount of profit.
+
+***ROC in details [0.5 is the best]***
+```{r}
+##ROC Curve in details##
+#### This is the code for the "red dot plots" ####
+
+index <- c(50)
+radius <- 0.03 *rep(1,length(index))
+color <- c("red")
+symbols(roccurve[index ,], circles=radius, inches = FALSE,ylim=c(0,1), xlim=c(0,1), ylab="True positive rate", xlab="False positive rate", bg=color)
+FPR_TPR(pred.lr.pl>=0.5 , My)
+
+
+index <- c(25,50)
+radius <- 0.03 *rep(1,length(index))
+color <- c("red","grey")
+symbols(roccurve[index ,], circles=radius, inches = FALSE,ylim=c(0,1), xlim=c(0,1), ylab="True positive rate", xlab="False positive rate", bg=color)
+FPR_TPR(pred.lr.pl>=0.25 , My)
+
+index <- c(10,25,50)
+color <- c("red","grey","grey")
+radius <- 0.03 *rep(1,length(index))
+symbols(roccurve[index ,], circles=radius, inches = FALSE,ylim=c(0,1), xlim=c(0,1), ylab="True positive rate", xlab="False positive rate", bg=color)
+FPR_TPR(pred.lr.pl>=0.1 , My)
+
+
+index <- c(1, 10,25,50)
+color <- c("red","grey","grey","grey")
+radius <- 0.03 *rep(1,length(index))
+symbols(roccurve[index ,], circles=radius, inches = FALSE,ylim=c(0,1), xlim=c(0,1), ylab="True positive rate", xlab="False positive rate", bg=color)
+FPR_TPR(pred.lr.pl>=0 , My)
+
+index <- c(75, 1, 10,25,50)
+color <- c("red","grey","grey","grey","grey")
+radius <- 0.03 *rep(1,length(index))
+symbols(roccurve[index ,], circles=radius, inches = FALSE,ylim=c(0,1), xlim=c(0,1), ylab="True positive rate", xlab="False positive rate", bg=color)
+FPR_TPR(pred.lr.pl>=0.75 , My)
+
+index <- c(100, 75, 1, 10,25,50)
+color <- c("red","grey","grey","grey","grey","grey")
+radius <- 0.03 *rep(1,length(index))
+symbols(roccurve[index ,], circles=radius, inches = FALSE,ylim=c(0,1), xlim=c(0,1), ylab="True positive rate", xlab="False positive rate", bg=color)
+FPR_TPR(pred.lr.pl>=1 , My)
+
+
+plot(roccurve[50,],  ylim=c(0,1), xlim=c(0,1), ylab="True positive rate", xlab="False positive rate",type="l", main="")
+
+```
+
+# 6. Deployment
+```{r}
+#### Cost curves to maximize profit
+n.new <- nrow(test)
+i<- 120 ### randomly selected one passenger
+x.new <- test[i,]
+
+maxCost <- as.numeric(floor(x.new$ticket_price))
+maxSat <- seq(0,400,by=1) #intend improve satisfaction. We timed 100 for calculation purpose
+profit <- rep(0,length(maxSat))
+
+ for ( s in maxSat) {
+  ### prob of dissatisfy with increasing satisfaction [IS]
+  x.new['clv'] <- test[i,'ticket_price'] - 100*s*0.01
+  x.new['satisfaction.level.overall'] <- test[i,'satisfaction.level.overall'] + s*0.01
+  prob.sat.x.new <- predict(m.lr, newdata=x.new, type="response")
+  ### CLV with IS given satisfy
+  CLV <- x.new[1,'clv'] 
+  profit[s]<- (prob.sat.x.new)*CLV
+}
+
+#Sat curve
+
+plotsat <- seq(0,4,by=0.01)
+sat.curve <- plot(plotsat, profit,xlab="Change of Satisfaction", ylab="Expected Profit", type="l",main = 'Change of satisfaction on expected profit') 
+
+#cost curve
+cost.curve <- plot(cost_function(maxSat*0.01), profit,  xlab="Cost", ylab="Expected Profit", type="l",main = 'Cost associated with change of satisfaction on expected profit')
+
+
+```
+
+
+Thank you!
+
