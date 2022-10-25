@@ -29,11 +29,11 @@ Hi! Welcome to my PERSONAL DATA SCIENCE PORTFOLIO website. My name is Jackson Ya
 
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Click through Rate Analysis (Python) ](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Projects)**
 
-The marketing department desires to understand the primary factors that influence the email click-through rate. I used logistic regression primarily to validate the significance of each element and to assist the marketing department in determining when and how to send promotional emails.
-
+The marketing department desires to understand the primary factors impacting the email click-through rate. I used logistic regression and decision trees primarily to validate the significance of each element and to assist the marketing department in determining when and how to send promotional emails to improve email marketing efficiency.
+#
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/airline.jpg"> **[Airline Passenger Satisfaction Analysis (R) ](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Projects/Airline%20Passenger%20Satisfaction)**
 
-At the end of the covid pandemic, it is anticipated that demand of air travel will increase. How can airlines best position themselves for success after the pandemic? This project explores how airlines can maximize profits for each customer based on customer satisfaction prospects?
+At the end of the covid pandemic, it is anticipated that demand of air travel will increase significantly (Compared to the previous two years, I traveled significantly more in 2022 :)). So, how can airlines best position themselves for success after the pandemic? This project explores how airlines can maximize profits for each customer based on customer satisfaction prospects.
 
 #
  
