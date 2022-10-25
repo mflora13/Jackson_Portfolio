@@ -16,7 +16,7 @@
 ## About Me
 Hi! Welcome to my PERSONAL DATA SCIENCE PORTFOLIO website. My name is Jackson Yang. I graduated from the University of Washington with a bachelor degree in **Information Systems** and **Supply Chain Management**, and I am currently enrolled in the **MQM Program (master of quantitative management)** at Duke Fuqua where I am learning at the intersection of business and analytics to solve real world data-based business problem.
 
-- In the **Projects** section, I listed a number of interesting data science projects I've completed in the past few years. In this repository, all projects (Class Project, Kaggle.com, etc.) are presented in iPython Notebooks, SQL and R markdown files.
+- In the **Projects** section, I listed a number of interesting data science projects I've completed in the past few years. In this repository, all projects (Class Project, Real World Project, Kaggle.com etc.) are presented in iPython Notebooks, SQL and R markdown files.
 - In the **Micro Projects** section, I highlighted the projects that demonstrate my programming abilities and data science expertise.
 
 ***Please feel free to contact me at the following email address or through Linkedln.***
