@@ -46,9 +46,9 @@ At the end of the covid pandemic, it is anticipated that demand of air travel wi
 
 
 ## Core Competencies
-- **Languages**: SQL, Python(Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn), R (Tidyverse)
-- **Tools**: MySQL, Tableau, MS Excel(VBA)
-- **Methodologies**: Machine Learning, A/B Testing
+- **Languages**: SQL, Python(Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn, Tensorflow), R (Tidyverse)
+- **Tools**: MySQL, Tableau, MS Excel(VBA), Jupyter Notebook, Excel (Crystal Ball, Pivot Table)
+- **Methodologies**: Machine Learning, A/B Testing, Ridge/Lasso/Elastic Net Regression, Support Vector Machine, Logistic Regression, Neural Network, Decision Trees, Random Forest, Principal Component Analysis, Bagging, Boosting, Clustering, NLP
 
 ## Certificates
 - Data Analytics Certificate By Google
