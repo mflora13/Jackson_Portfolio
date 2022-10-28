@@ -10,7 +10,6 @@
 * [Projects](#projects)
 * [Micro Projects](#micro-projects)
 * [Core Competencies](#core-competencies)
-* [Certificates](Certificates)
 
 
 ## About Me
@@ -50,6 +49,4 @@ At the end of the covid pandemic, it is anticipated that demand of air travel wi
 - **Tools**: MySQL, Tableau, MS Excel(VBA), Jupyter Notebook, Excel (Crystal Ball, Pivot Table)
 - **Methodologies**: Machine Learning, A/B Testing, Ridge/Lasso/Elastic Net Regression, Support Vector Machine, Logistic Regression, Neural Network, Decision Trees, Random Forest, Principal Component Analysis, Bagging, Boosting, Clustering, NLP
 
-## Certificates
-- Data Analytics Certificate By Google
 
