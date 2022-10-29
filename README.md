@@ -35,6 +35,11 @@ The marketing department desires to understand the primary factors impacting the
 At the end of the covid pandemic, it is anticipated that demand of air travel will increase significantly (Compared to the previous two years, I traveled significantly more in 2022 :)). So, how can airlines best position themselves for success after the pandemic? This project explores how airlines can maximize profits for each customer based on customer satisfaction prospects.
 
 #
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/Dognition.png"> **[Database Cleaning and Customer Analysis (MySQL) ](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Projects/Dognition)**
+
+Dognition's mission is to present you with an unprecedented perspective on how your dog sees the world through various coginitive traning exercises. Dognition acquire and analyze tens of thousands of data everyday, but they are messey and require a significant amount of cleaning. In this project, I assisted them in cleaning up and gaining business insights from their datasets.
+
+#
  
 
 ## Micro Projects
