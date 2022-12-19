@@ -40,6 +40,11 @@ At the end of the covid pandemic, it is anticipated that demand of air travel wi
 [Dognition](https://www.dognition.com/)'s mission is to present you with an unprecedented perspective on how your dog sees the world through various coginitive traning exercises. Dognition acquire and analyze tens of thousands of data everyday, but they are messey and require a significant amount of cleaning. In this project, I assisted them in cleaning up and gaining business insights from their datasets.
 
 #
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/conversion%20rate.png"> **[Customer Conversion Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/tree/main/Projects/Conversion%20Rate)**
+
+Conversion rate analysis can help businesses identify opportunities for growth. By identifying segments of the market that are more or less likely to convert, businesses can identify areas where they can focus their efforts in order to drive growth. In this project, we looked into a customer conversion dataset and help company increase the likelihood that their marketing and sales efforts will be successful.
+
+#
  
 
 ## Micro Projects
