@@ -52,6 +52,7 @@ Conversion rate analysis can help businesses identify opportunities for growth. 
     - [LeetCode](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Micro%20Projects/SQL/Leetcode)
     - [MySQL45](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Micro%20Projects/SQL/Mysql45(Chinese))
 - Data Visualization
+    - [Auction Data Visualization (Tableau)](https://github.com/YZXBiz/Jackson_Portfolio/tree/main/Micro%20Projects/Auction%20Data%20Analysis)
 
 
 ## Core Competencies
