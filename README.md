@@ -13,12 +13,12 @@
 
 
 ## About Me
-Hi! Welcome to my PERSONAL DATA SCIENCE PORTFOLIO website. My name is Jackson Yang. I graduated from the University of Washington with a bachelor degree in **Information Systems** and **Supply Chain Management**, and I am currently enrolled in the **MQM Program (master of quantitative management)** at Duke Fuqua where I am learning at the intersection of business and analytics to solve real world data-based business problem.
+Welcome to my personal data science portfolio website. My name is Jackson Yang and I am a recent graduate of the University of Washington with a bachelor's degree in **Information Systems and Supply Chain Management**. I am currently enrolled in the **Master of Quantitative Management: Business Analytics** program at Duke Fuqua, where I am learning to utilize data analytics to solve real-world business problems. With my background in both business and data science, I am well-equipped to navigate the intersection of these fields and drive data-driven decision making in organizations.
 
-- In the **Projects** section, I listed a number of interesting data science projects I've completed in the past few years. In this repository, all projects (Class Project, Real World Project, Kaggle.com etc.) are presented in iPython Notebooks, SQL and R markdown files.
-- In the **Micro Projects** section, I highlighted the projects that demonstrate my programming abilities and data science expertise.
+- In the **Projects** section of this website, you will find a selection of interesting data science projects that I have completed in recent years. These projects are presented in iPython notebooks, SQL, or R markdown files for easy reference and review. Each project highlights my skills in data analysis, machine learning, and problem-solving, and demonstrates my ability to apply these skills to real-world scenarios.
+- In the **Micro Projects** section, I highlighted the projects that demonstrate my programming abilities and data science expertise, such as SQL, data vivsualization, etc.
 
-***Please feel free to contact me at the following email address or through Linkedln.***
+***Thank you for visiting my personal data science portfolio website. If you have any questions or would like to discuss potential opportunities for collaboration, please don't hesitate to contact me at the email address provided on this site or through LinkedIn. I welcome the opportunity to connect with like-minded professionals and discuss ways in which we can leverage data science to drive positive impact in our respective fields.***
 
 - **Email**: [yzhuox721@gmail.com](yzhuox721@gmail.com)
 - **Linkedln**: [https://www.linkedin.com/in/zhuoxin-yang/](https://www.linkedin.com/in/zhuoxin-yang/)
@@ -61,8 +61,8 @@ Studying employee retention using machine learning helps businesses identify fac
 
 
 ## Core Competencies
-- **Languages**: SQL, Python(Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn, Tensorflow), R (Tidyverse)
-- **Tools**: MySQL, Tableau, MS Excel(VBA), Jupyter Notebook, Excel (Crystal Ball, Pivot Table)
-- **Methodologies**: Machine Learning, A/B Testing, Ridge/Lasso/Elastic Net Regression, Support Vector Machine, Logistic Regression, Neural Network, Decision Trees, Random Forest, Principal Component Analysis, Bagging, Boosting, Clustering, NLP
+- **Languages**: SQL, Python(Spacy, Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn, Tensorflow), R(Tidyverse)
+- **Tools**: MySQL, Tableau, MS Excel(VBA), Jupyter Notebook, Excel (Crystal Ball, Pivot Table), Github (git)
+- **Methodologies**: Machine Learning, A/B Testing, L1/L2 regularization, Support Vector Machine, Logistic Regression, Neural Network, Decision Trees, Random Forest, XG Boost, Principal Component Analysis, K-Means Clustering, Natural Language Processing
 
 
