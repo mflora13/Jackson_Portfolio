@@ -45,6 +45,11 @@ At the end of the covid pandemic, it is anticipated that demand of air travel wi
 Conversion rate analysis can help businesses identify opportunities for growth. By identifying segments of the market that are more or less likely to convert, businesses can identify areas where they can focus their efforts in order to drive growth. In this project, we looked into a customer conversion dataset and help company increase the likelihood that their marketing and sales efforts will be successful.
 
 #
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Jackson_Portfolio/main/Images/Employee-retention-rate-1000x553-1.webp"> **[Employee Retention Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/tree/main/Projects/Employee%20Retention)**
+
+Studying employee retention using machine learning helps businesses identify factors that contribute to employee turnover and develop strategies to improve retention. By analyzing data on employee demographics, job departments, and other factors, machine learning can identify patterns and trends that may be associated with higher or lower retention rates. This information can help businesses improve retention rates and create a more productive workforce.
+
+#
  
 
 ## Micro Projects
