@@ -33,12 +33,10 @@ The marketing department desires to understand the primary factors impacting the
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/airline.jpg"> **[Airline Passenger Satisfaction Analysis (R) ](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Projects/Airline%20Passenger%20Satisfaction)**
 
 At the end of the covid pandemic, it is anticipated that demand of air travel will increase significantly (Compared to the previous two years, I traveled significantly more in 2022 :)). So, how can airlines best position themselves for success after the pandemic? This project explores how airlines can maximize profits for each customer based on customer satisfaction prospects.
-
 #
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/images.jpg"> **[Database Cleaning and Customer Analysis (MySQL) ](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Projects/Dognition)**
 
 [Dognition](https://www.dognition.com/)'s mission is to present you with an unprecedented perspective on how your dog sees the world through various coginitive traning exercises. Dognition acquire and analyze tens of thousands of data everyday, but they are messey and require a significant amount of cleaning. In this project, I assisted them in cleaning up and gaining business insights from their datasets.
-
 #
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/conversion%20rate.png"> **[Customer Conversion Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/tree/main/Projects/Conversion%20Rate)**
 
@@ -53,7 +51,6 @@ Studying employee retention using machine learning helps businesses identify fac
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/Self_Check_out.webp"> **[Self Check-Out Fraud Detection (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/tree/main/Projects/Self%20Checkout%20Fraud%20Detection)**
 
 Self-checkout systems in retail stores offer convenience for customers, but can also leave retailers vulnerable to fraud if not properly monitored. A fraud detection model can help retailers identify suspicious activity and target certain purchases for additional scrutiny in order to prevent abuse and loss. In this project, we will aim to minimize the number of checks performed to avoid unnecessary expenses and to prevent falsely accusing innocent customers and causing them inconvenience.
-
 #
  
 
