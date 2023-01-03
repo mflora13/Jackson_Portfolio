@@ -26,10 +26,15 @@ Welcome to my personal data science portfolio website. My name is Jackson Yang a
 
 ## Projects
 
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Click through Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Email_click_rate/Logistic%20Regression.ipynb)**
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/Self_Check_out.webp"> **[Self Check-Out Fraud Detection (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Self%20Checkout%20Fraud%20Detection/Code.ipynb)**
 
-The marketing department desires to understand the primary factors impacting the email click-through rate. I used logistic regression and decision trees primarily to validate the significance of each element and to assist the marketing department in determining when and how to send promotional emails to improve email marketing efficiency.
+Self-checkout systems in retail stores offer convenience for customers, but can also leave retailers vulnerable to fraud if not properly monitored. A fraud detection model can help retailers identify suspicious activity and target certain purchases for additional scrutiny in order to prevent abuse and loss. In this project, we will aim to minimize the number of checks performed to avoid unnecessary expenses and to prevent falsely accusing innocent customers and causing them inconvenience.
 #
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Jackson_Portfolio/main/Images/Employee-retention-rate-1000x553-1.webp"> **[Employee Retention Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Employee%20Retention/Code.ipynb)**
+
+Studying employee retention using machine learning helps businesses identify factors that contribute to employee turnover and develop strategies to improve retention. By analyzing data on employee demographics, job departments, and other factors, machine learning can identify patterns and trends that may be associated with higher or lower retention rates. This information can help businesses improve retention rates and create a more productive workforce.
+#
+
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/airline.jpg"> **[Airline Passenger Satisfaction Analysis (R) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Airline%20Passenger%20Satisfaction/R-Code.Rmd)**
 
 At the end of the covid pandemic, it is anticipated that demand of air travel will increase significantly (Compared to the previous two years, I traveled significantly more in 2022 :)). So, how can airlines best position themselves for success after the pandemic? This project explores how airlines can maximize profits for each customer based on customer satisfaction prospects.
@@ -43,14 +48,9 @@ At the end of the covid pandemic, it is anticipated that demand of air travel wi
 Conversion rate analysis can help businesses identify opportunities for growth. By identifying segments of the market that are more or less likely to convert, businesses can identify areas where they can focus their efforts in order to drive growth. In this project, we looked into a customer conversion dataset and help company increase the likelihood that their marketing and sales efforts will be successful.
 
 #
-<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Jackson_Portfolio/main/Images/Employee-retention-rate-1000x553-1.webp"> **[Employee Retention Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Employee%20Retention/Code.ipynb)**
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Click through Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Email_click_rate/Logistic%20Regression.ipynb)**
 
-Studying employee retention using machine learning helps businesses identify factors that contribute to employee turnover and develop strategies to improve retention. By analyzing data on employee demographics, job departments, and other factors, machine learning can identify patterns and trends that may be associated with higher or lower retention rates. This information can help businesses improve retention rates and create a more productive workforce.
-
-#
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/Self_Check_out.webp"> **[Self Check-Out Fraud Detection (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Self%20Checkout%20Fraud%20Detection/Code.ipynb)**
-
-Self-checkout systems in retail stores offer convenience for customers, but can also leave retailers vulnerable to fraud if not properly monitored. A fraud detection model can help retailers identify suspicious activity and target certain purchases for additional scrutiny in order to prevent abuse and loss. In this project, we will aim to minimize the number of checks performed to avoid unnecessary expenses and to prevent falsely accusing innocent customers and causing them inconvenience.
+The marketing department desires to understand the primary factors impacting the email click-through rate. I used logistic regression and decision trees primarily to validate the significance of each element and to assist the marketing department in determining when and how to send promotional emails to improve email marketing efficiency.
 #
  
 
