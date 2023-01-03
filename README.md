@@ -26,19 +26,19 @@ Welcome to my personal data science portfolio website. My name is Jackson Yang a
 
 ## Projects
 
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Click through Rate Analysis (Python) ](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Projects/Email_click_rate)**
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Click through Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Email_click_rate/Logistic%20Regression.ipynb)**
 
 The marketing department desires to understand the primary factors impacting the email click-through rate. I used logistic regression and decision trees primarily to validate the significance of each element and to assist the marketing department in determining when and how to send promotional emails to improve email marketing efficiency.
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/airline.jpg"> **[Airline Passenger Satisfaction Analysis (R) ](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Projects/Airline%20Passenger%20Satisfaction)**
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/airline.jpg"> **[Airline Passenger Satisfaction Analysis (R) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Airline%20Passenger%20Satisfaction/R-Code.Rmd)**
 
 At the end of the covid pandemic, it is anticipated that demand of air travel will increase significantly (Compared to the previous two years, I traveled significantly more in 2022 :)). So, how can airlines best position themselves for success after the pandemic? This project explores how airlines can maximize profits for each customer based on customer satisfaction prospects.
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/images.jpg"> **[Database Cleaning and Customer Analysis (MySQL) ](https://github.com/YZXBiz/Yang_Portfolio/tree/main/Projects/Dognition)**
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/images.jpg"> **[Database Cleaning and Customer Analysis (MySQL) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Dognition/Dognition%20Report.ipynb)**
 
 [Dognition](https://www.dognition.com/)'s mission is to present you with an unprecedented perspective on how your dog sees the world through various coginitive traning exercises. Dognition acquire and analyze tens of thousands of data everyday, but they are messey and require a significant amount of cleaning. In this project, I assisted them in cleaning up and gaining business insights from their datasets.
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/conversion%20rate.png"> **[Customer Conversion Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/tree/main/Projects/Conversion%20Rate)**
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/conversion%20rate.png"> **[Customer Conversion Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Conversion%20Rate/Code.ipynb)**
 
 Conversion rate analysis can help businesses identify opportunities for growth. By identifying segments of the market that are more or less likely to convert, businesses can identify areas where they can focus their efforts in order to drive growth. In this project, we looked into a customer conversion dataset and help company increase the likelihood that their marketing and sales efforts will be successful.
 
