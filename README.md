@@ -39,6 +39,11 @@ Studying employee retention using machine learning helps businesses identify fac
 
 At the end of the covid pandemic, it is anticipated that demand of air travel will increase significantly (Compared to the previous two years, I traveled significantly more in 2022 :)). So, how can airlines best position themselves for success after the pandemic? This project explores how airlines can maximize profits for each customer based on customer satisfaction prospects.
 #
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/ecommerce%20fraud.jpg"> **[eCommerce Fraud Detection (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/ecommerce%20Fraud%20Detection/Code.ipynb)**
+
+Due to the enormous volume of online transactions, ecommerce businesses are especially prone to fraud. Fraud can cause a variety of problems for organizations and customers. Fraud detection systems can lower the probability of losses while also providing a safe environment for clients, increasing trust and happiness. In this project, I will create a model that can predict fraudulent activities while also explaining why the model made that conclusion.
+
+#
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/images.jpg"> **[Database Cleaning and Customer Analysis (MySQL) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Dognition/Dognition%20Report.ipynb)**
 
 [Dognition](https://www.dognition.com/)'s mission is to present you with an unprecedented perspective on how your dog sees the world through various coginitive traning exercises. Dognition acquire and analyze tens of thousands of data everyday, but they are messey and require a significant amount of cleaning. In this project, I assisted them in cleaning up and gaining business insights from their datasets.
