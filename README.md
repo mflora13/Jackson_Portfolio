@@ -57,6 +57,14 @@ Conversion rate analysis can help businesses identify opportunities for growth. 
 
 The marketing department desires to understand the primary factors impacting the email click-through rate. I used logistic regression and decision trees primarily to validate the significance of each element and to assist the marketing department in determining when and how to send promotional emails to improve email marketing efficiency.
 #
+
+#
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/funnel%20analysis.jpg"> **[FunnelAnalysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Funnel%20Analysis/Code.ipynb)**
+
+Funnel analysis helps understand the customer path and enhance conversions. Businesses may learn where users are sliding off a sales or conversion funnel by tracking their progress. This data can be utilized to optimize the funnel and improve conversion rates, boosting sales and income. In this project, we'll analyze a company's conversion funnel to discover bottlenecks and optimize the customer journey.
+#
+
+
  
 
 ## Micro Projects
