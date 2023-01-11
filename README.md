@@ -34,6 +34,11 @@ Self-checkout systems in retail stores offer convenience for customers, but can 
 
 Studying employee retention using machine learning helps businesses identify factors that contribute to employee turnover and develop strategies to improve retention. By analyzing data on employee demographics, job departments, and other factors, machine learning can identify patterns and trends that may be associated with higher or lower retention rates. This information can help businesses improve retention rates and create a more productive workforce.
 #
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/ab%20testing.webp"> **[Translation AB Testing (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Translation%20AB%20Testing/Code.ipynb)**
+
+A/B testing is essential for email marketing because it lets marketers compare open rates, click-through rates, and conversions. Marketers can optimize email campaigns by doing A/B testing to determine the most important factors. A/B testing eliminates uncertainty and improves email marketing results. In this project, I will analyze the results of an A/B test to determine the effectiveness of the AB Testing and what insights can be gathered from the results.
+
+#
 
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/airline.jpg"> **[Airline Passenger Satisfaction Analysis (R) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Airline%20Passenger%20Satisfaction/R-Code.Rmd)**
 
