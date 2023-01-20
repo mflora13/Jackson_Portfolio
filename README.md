@@ -18,7 +18,8 @@ Welcome to my personal data science portfolio website. My name is Jackson Yang a
 - In the **Projects** section of this website, you will find a selection of interesting data science projects that I have completed in recent years. These projects are presented in iPython notebooks, SQL, or R markdown files for easy reference and review. Each project highlights my skills in data analysis, machine learning, and problem-solving, and demonstrates my ability to apply these skills to real-world scenarios.
 - In the **Micro Projects** section, I highlighted the projects that demonstrate my programming abilities and data science expertise, such as SQL, data vivsualization, etc.
 
-***Thank you for visiting my personal data science portfolio website. If you have any questions or would like to discuss potential opportunities for collaboration, please don't hesitate to contact me at the email address provided on this site or through LinkedIn. I welcome the opportunity to connect with like-minded professionals and discuss ways in which we can leverage data science to drive positive impact in our respective fields.***
+***Thank you for visiting my personal data science portfolio website. If you have any questions or would like to discuss potential opportunities for collaboration, please don't hesitate to contact me at the 
+address provided on this site or through LinkedIn. I welcome the opportunity to connect with like-minded professionals and discuss ways in which we can leverage data science to drive positive impact in our respective fields.***
 
 - **Email**: [yzhuox721@gmail.com](yzhuox721@gmail.com)
 - **Linkedln**: [https://www.linkedin.com/in/zhuoxin-yang/](https://www.linkedin.com/in/zhuoxin-yang/)
@@ -29,6 +30,12 @@ Welcome to my personal data science portfolio website. My name is Jackson Yang a
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/Self_Check_out.webp"> **[Self Check-Out Fraud Detection (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Self%20Checkout%20Fraud%20Detection/Code.ipynb)**
 
 Self-checkout systems in retail stores offer convenience for customers, but can also leave retailers vulnerable to fraud if not properly monitored. A fraud detection model can help retailers identify suspicious activity and target certain purchases for additional scrutiny in order to prevent abuse and loss. In this project, we will aim to minimize the number of checks performed to avoid unnecessary expenses and to prevent falsely accusing innocent customers and causing them inconvenience.
+
+#
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Marketing Camapign Link Click Analysis and Prediction (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Email_Marketing_Campaign/Code.ipynb)**
+
+Analyzing click rates and email marketing is crucial in understanding the success of campaigns and making informed decisions. By analyzing click rates and other metrics, you can gain insight into the effectiveness of subject lines, headlines, calls-to-action, audience engagement, and segmentation. This information can then be used to guide future marketing strategies. In this project, I will be analyzing email marketing data and developing a machine learning model that predicts customer link click probability.
+
 #
 <img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Jackson_Portfolio/main/Images/Employee-retention-rate-1000x553-1.webp"> **[Employee Retention Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Employee%20Retention/Code.ipynb)**
 
@@ -58,12 +65,7 @@ Due to the enormous volume of online transactions, ecommerce businesses are espe
 Conversion rate analysis can help businesses identify opportunities for growth. By identifying segments of the market that are more or less likely to convert, businesses can identify areas where they can focus their efforts in order to drive growth. In this project, we looked into a customer conversion dataset and help company increase the likelihood that their marketing and sales efforts will be successful.
 
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Click through Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Email_click_rate/Logistic%20Regression.ipynb)**
 
-The marketing department desires to understand the primary factors impacting the email click-through rate. I used logistic regression and decision trees primarily to validate the significance of each element and to assist the marketing department in determining when and how to send promotional emails to improve email marketing efficiency.
-#
-
-#
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/funnel%20analysis.jpg"> **[Funnel Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Funnel%20Analysis/Code.ipynb)**
 
 Funnel analysis helps understand the customer path and enhance conversions. Businesses may learn where users are sliding off a sales or conversion funnel by tracking their progress. This data can be utilized to optimize the funnel and improve conversion rates, boosting sales and income. In this project, we'll analyze a company's conversion funnel to discover bottlenecks and optimize the customer journey.
