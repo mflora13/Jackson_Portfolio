@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Customer Click Through Probability Prediction</title>
+  
+</head>
+
+<body style="background: #fff;">
+ <div class="login">
+	<h1 style="color: #00008B; font-size: x-large;">Customer Click Through Rate Prediction</h1>
+
+<form action="{{ url_for('predict')}}" method="post">
+    <label for="user_past_purchases">User past purchases:</label>
+    <input type="number" name="user_past_purchases" placeholder="enter a number (>=0)" required="required" /><br>
+
+    <br>
+
+    <label for="email_text">Email text:</label><br>
+    <input type="radio" name="email_text" value="short_email"> short_email<br>
+    <input type="radio" name="email_text" value="long_email"> long_email<br>
+    
+    <br>
+    
+    <label for="email_version">Email version:</label><br>
+    <input type="radio" name="email_version" value="personalized"> personalized<br>
+    <input type="radio" name="email_version" value="generic"> generic<br>
+
+    <br>
+
+    <label for="weekday">Weekday:</label><br>
+    <input type="radio" name="weekday" value="Monday"> Monday<br>
+    <input type="radio" name="weekday" value="Tuesday"> Tuesday<br>
+    <input type="radio" name="weekday" value="Wednesday"> Wednesday<br>
+    <input type="radio" name="weekday" value="Thursday"> Thursday<br>
+    <input type="radio" name="weekday" value="Friday"> Friday<br>
+    <input type="radio" name="weekday" value="Saturday"> Saturday<br>
+    <input type="radio" name="weekday" value="Sunday"> Sunday<br>
+
+    <br>
+
+    <label for="user_country">User country:</label><br>
+    <input type="radio" name="user_country" value="FR"> FR<br>
+    <input type="radio" name="user_country" value="UK"> UK<br>
+    <input type="radio" name="user_country" value="US"> US<br>
+    <input type="radio" name="user_country" value="ES"> ES<br>
+    
+    <br>
+
+    <label for="time_of_day">Time of day:</label><br>
+    <input type="radio" name="time_of_day" value="morning"> morning<br>
+    <input type="radio" name="time_of_day" value="evening"> evening<br>
+    <input type="radio" name="time_of_day" value="midnight"> midnight<br>
+    <input type="radio" name="time_of_day" value="afternoon"> afternoon<br>
+    
+    <br>
+
+    <input type="submit" class="btn btn-primary btn-block btn-large"> Predict Link Click Probability</button></p>
+    
+    <br>
+    <br>
+    <h2 style = "color:Red">
+    {{prediction_text}} </h2>
+    
+</form>
+
+
