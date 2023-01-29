@@ -32,7 +32,7 @@ address provided on this site or through LinkedIn. I welcome the opportunity to 
 Self-checkout systems in retail stores offer convenience for customers, but can also leave retailers vulnerable to fraud if not properly monitored. A fraud detection model can help retailers identify suspicious activity and target certain purchases for additional scrutiny in order to prevent abuse and loss. In this project, we will aim to minimize the number of checks performed to avoid unnecessary expenses and to prevent falsely accusing innocent customers and causing them inconvenience.
 
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Marketing Camapign Link Click Analysis and Prediction (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Email_Marketing_Campaign/Code.ipynb)**
+<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Marketing campaign Link Click Analysis and Prediction (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Email_Marketing_Campaign/Code.ipynb)**
 
 [Model Deployment](https://web-production-9c3f.up.railway.app/). Analyzing click rates and email marketing is crucial in understanding the success of campaigns and making informed decisions. By analyzing click rates and other metrics, you can gain insight into the effectiveness of subject lines, headlines, calls-to-action, audience engagement, and segmentation. This information can then be used to guide future marketing strategies. In this project, I will be analyzing email marketing data and developing a machine learning model that predicts customer link click probability.
 
