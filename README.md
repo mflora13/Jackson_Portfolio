@@ -58,7 +58,7 @@ Due to the enormous volume of online transactions, ecommerce businesses are espe
 #
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/images.jpg"> **[Database Cleaning and Customer Analysis (MySQL) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Dognition/Dognition%20Report.ipynb)**
 
-[Dognition](https://www.dognition.com/)'s mission is to present you with an unprecedented perspective on how your dog sees the world through various coginitive traning exercises. Dognition acquire and analyze tens of thousands of data everyday, but they are messey and require a significant amount of cleaning. In this project, I assisted them in cleaning up and gaining business insights from their datasets.
+[Dognition](https://www.dognition.com/)'s mission is to present you with an unprecedented perspective on how your dog sees the world through various cognitive training exercises. Dognition acquire and analyze tens of thousands of data everyday, but they are messy and require a significant amount of cleaning. In this project, I assisted them in cleaning up and gaining business insights from their datasets.
 #
 <img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/conversion%20rate.png"> **[Customer Conversion Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Conversion%20Rate/Code.ipynb)**
 
