@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fraud Detection at Self Check Out</title>
+  
+  <!-- Add some style to the form -->
+  <style>
+    body {
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00008B;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 1.2rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #00008B;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #000066;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      color: red;
+    }
+
+    .description {
+      font-size: 1rem;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      color: #777;
+    }
+
+    .value-range {
+      font-size: 0.8rem;
+      margin-top: 5px;
+      color: #777;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <div class="container">
+    <h1>Fraud detection at self check out</h1>
+
+    <form action="{{ url_for('predict')}}" method="post">
+      <label for="totalScanTimeInSeconds">Total Scan Time (Seconds):</label>
+      <input type="number" name="totalScanTimeInSeconds" placeholder="Enter a positive whole number" required="required" />
+      <div class="description">The total time in seconds between the first and last product scanned.</div>
+
+      <label for="grandTotal">Grand Total:</label>
+      <input type="number" name="grandTotal" placeholder="Enter a positive decimal number with maximum two decimal places" required="required" />
+      <div class="description">The grand total of products scanned.</div>
+
+      <label for="lineItemVoids">Line Item Voids:</label>
+      <input type="number" name="lineItemVoids" placeholder="Enter a positive whole number" required="required" />
+      <div class="description">The number of voided scans.</div>
+
+      <label for="scansWithoutRegistration">Scans Without Registration:</label>
+      <input type="number" name="scansWithoutRegistration" placeholder="Enter a positive whole number or 0" required ="required" />
+      <div class="description">The number of attempts to activate the scanner without actually scanning anything.</div>
+
+      <label for="quantityModifications">Quantity Modifications:</label>
+      <input type="number" name="quantityModifications" placeholder="Enter a positive whole number or 0" required="required" />
+      <div class="description">The number of modified quantities for one of the scanned products.</div>
+    
+      <label for="scannedLineItemsPerSecond">Scanned Line Items Per Second:</label>
+      <input type="number" name="scannedLineItemsPerSecond" step="0.01" placeholder="Enter a positive decimal number" required="required" />
+      <div class="description">The average number of scanned products per second.</div>
+    
+      <label for="valuePerSecond">Value Per Second:</label>
+      <input type="number" name="valuePerSecond" step="0.01" placeholder="Enter a positive decimal number" required="required" />
+      <div class="description">The average total value of scanned products per second.</div>
+    
+      <label for="lineItemVoidsPerPosition">Line Item Voids Per Position:</label>
+      <input type="number" name="lineItemVoidsPerPosition" step="0.01" placeholder="Enter a positive decimal number" required="required" />
+      <div class="description">The average number of item voids per total number of all scanned and not cancelled products.</div>
+    
+      <label for="Trust_level">Trust Level:</label>
+      <input type="number" name="Trust_level" placeholder="Enter a value between 1 and 6" required="required" min="1" max="6" />
+      <div class="description">A customer's individual trust level (1: Lowest trustworthiness, 6: Highest trustworthiness).</div>
+
+      <input type="submit" value="Predict Fraud Probability" />
+
+      <h2>{{ prediction_text }}</h2>
+    </form>
+    
+    </div>
+    </body>
+    </html>
