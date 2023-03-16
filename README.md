@@ -27,12 +27,12 @@ address provided on this site or through LinkedIn. I welcome the opportunity to 
 
 ## Projects
 
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/Self_Check_out.webp"> **[Self Check-Out Fraud Detection (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Fraud%20Detection%20at%20Self%20Check-Out/Self_Checkout_Code.ipynb)**
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Jackson_Portfolio/main/Images/Self_Check_out.webp> **[Self Check-Out Fraud Detection (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Fraud%20Detection%20at%20Self%20Check-Out/Self_Checkout_Code.ipynb)**
 
 [Model Deployment](https://fraud-detection-production.up.railway.app/). Self-checkout systems in retail stores offer convenience for customers, but can also leave retailers vulnerable to fraud if not properly monitored. A fraud detection model can help retailers identify suspicious activity and target certain purchases for additional scrutiny in order to prevent abuse and loss. In this project, we will aim to minimize the number of checks performed to avoid unnecessary expenses and to prevent falsely accusing innocent customers and causing them inconvenience.
 
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/click-thr.png"> **[Email Marketing campaign Link Click Analysis and Prediction (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Email_Marketing_Campaign/Code.ipynb)**
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Yang_Portfolio/main/Images/click-thr.png"> **[Email Marketing campaign Link Click Analysis and Prediction (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Email_Marketing_Campaign/Code.ipynb)**
 
 [Model Deployment](https://web-production-9c3f.up.railway.app/). Analyzing click rates and email marketing is crucial in understanding the success of campaigns and making informed decisions. By analyzing click rates and other metrics, you can gain insight into the effectiveness of subject lines, headlines, calls-to-action, audience engagement, and segmentation. This information can then be used to guide future marketing strategies. In this project, I will be analyzing email marketing data and developing a machine learning model that predicts customer link click probability.
 
@@ -41,32 +41,32 @@ address provided on this site or through LinkedIn. I welcome the opportunity to 
 
 Studying employee retention using machine learning helps businesses identify factors that contribute to employee turnover and develop strategies to improve retention. By analyzing data on employee demographics, job departments, and other factors, machine learning can identify patterns and trends that may be associated with higher or lower retention rates. This information can help businesses improve retention rates and create a more productive workforce.
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/ab%20testing.webp"> **[Translation AB Testing (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Translation%20AB%20Testing/Code.ipynb)**
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Jackson_Portfolio/main/Images/ab%20testing.webp"> **[Translation AB Testing (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Translation%20AB%20Testing/Code.ipynb)**
 
 A/B testing is essential for email marketing because it lets marketers compare open rates, click-through rates, and conversions. Marketers can optimize email campaigns by doing A/B testing to determine the most important factors. A/B testing eliminates uncertainty and improves email marketing results. In this project, I will analyze the results of an A/B test to determine the effectiveness of the AB Testing and what insights can be gathered from the results.
 
 #
 
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/airline.jpg"> **[Airline Passenger Satisfaction Analysis (R) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Airline%20Passenger%20Satisfaction/R-Code.Rmd)**
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Yang_Portfolio/main/Images/airline.jpg"> **[Airline Passenger Satisfaction Analysis (R) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Airline%20Passenger%20Satisfaction/R-Code.Rmd)**
 
 At the end of the covid pandemic, it is anticipated that demand of air travel will increase significantly (Compared to the previous two years, I traveled significantly more in 2022 :)). So, how can airlines best position themselves for success after the pandemic? This project explores how airlines can maximize profits for each customer based on customer satisfaction prospects.
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/ecommerce%20fraud.jpg"> **[eCommerce Fraud Detection (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/ecommerce%20Fraud%20Detection/Code.ipynb)**
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Jackson_Portfolio/main/Images/ecommerce%20fraud.jpg"> **[eCommerce Fraud Detection (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/ecommerce%20Fraud%20Detection/Code.ipynb)**
 
 Due to the enormous volume of online transactions, ecommerce businesses are especially prone to fraud. Fraud can cause a variety of problems for organizations and customers. Fraud detection systems can lower the probability of losses while also providing a safe environment for clients, increasing trust and happiness. In this project, I will create a model that can predict fraudulent activities while also explaining why the model made that conclusion.
 
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/images.jpg"> **[Database Cleaning and Customer Analysis (MySQL) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Dognition/Dognition%20Report.ipynb)**
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Yang_Portfolio/main/Images/images.jpg"> **[Database Cleaning and Customer Analysis (MySQL) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Dognition/Dognition%20Report.ipynb)**
 
 [Dognition](https://www.dognition.com/)'s mission is to present you with an unprecedented perspective on how your dog sees the world through various cognitive training exercises. Dognition acquire and analyze tens of thousands of data everyday, but they are messy and require a significant amount of cleaning. In this project, I assisted them in cleaning up and gaining business insights from their datasets.
 #
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/conversion%20rate.png"> **[Customer Conversion Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Conversion%20Rate/Code.ipynb)**
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Jackson_Portfolio/main/Images/conversion%20rate.png"> **[Customer Conversion Rate Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Conversion%20Rate/Code.ipynb)**
 
 Conversion rate analysis can help businesses identify opportunities for growth. By identifying segments of the market that are more or less likely to convert, businesses can identify areas where they can focus their efforts in order to drive growth. In this project, we looked into a customer conversion dataset and help company increase the likelihood that their marketing and sales efforts will be successful.
 
 #
 
-<img align="left" width="250" height="150" src="https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Images/funnel%20analysis.jpg"> **[Funnel Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Funnel%20Analysis/Code.ipynb)**
+<img align="left" width="250" height="150" src="https://raw.githubusercontent.com/YZXBiz/Jackson_Portfolio/main/Images/funnel%20analysis.jpg"> **[Funnel Analysis (Python) ](https://github.com/YZXBiz/Jackson_Portfolio/blob/main/Projects/Funnel%20Analysis/Code.ipynb)**
 
 Funnel analysis helps understand the customer path and enhance conversions. Businesses may learn where users are sliding off a sales or conversion funnel by tracking their progress. This data can be utilized to optimize the funnel and improve conversion rates, boosting sales and income. In this project, we'll analyze a company's conversion funnel to discover bottlenecks and optimize the customer journey.
 #
