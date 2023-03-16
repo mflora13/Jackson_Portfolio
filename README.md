@@ -1,7 +1,7 @@
 <h1 align="center"> Data Science Portfolio by Jackson Yang </h1> <br>
 
 <p align="center">
-    <img src="https://github.com/YZXBiz/Yang_Portfolio/blob/main/Images/DATAAC.jpg" width="400" height="300">
+    <img src="https://raw.githubusercontent.com/YZXBiz/Yang_Portfolio/main/Images/DATAAC.jpg" width="400" height="300">
 </p>
 
 
